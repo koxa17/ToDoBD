@@ -1,0 +1,68 @@
+@@include('parts/header.html')
+<div class="loading"></div>
+
+<div class="container d-flex justify-content-center mb-4">
+    <div class="wrapper-header position-header">
+        <div class="header d-flex align-items-center justify-content-center">
+            <a href="" class="button" data-toggle="modal" data-form="signUpForm" data-target='#signUpModal'>Регистрация</a>
+
+            <div class="logo d-flex mr-5 ml-5">
+                <a href="/"><img src="img/todo_logo.png" alt="Логотип"></a>
+            </div>
+
+            <a href="" class="button" data-toggle="modal" data-form="signInForm" data-target='#signInModal'>Вход</a>
+        </div>
+
+        <div class="separator"><span class="circle"></span></div>
+    </div>
+</div>
+
+<!-- TODO: Удалить margin-top -->
+<div class="container mb-3">
+
+    <div class="display-4 mb-2">ToDo приложение</div>
+    <div class="h4 mb-5">Cписок задач на сегодня</div>
+
+    <!-- List of tasks -->
+    <div class="card mb-4">
+        <ul class="list-group list-group-flush" id="list-tasks">
+
+            <!-- <li class="list-group-item justify-content-center align-items-center listEmpty">
+                <span class="task-title">Список пуст</span>
+            </li>
+            
+
+            <li class="list-group-item d-flex justify-content-between">
+                <span class="task-title">Задача <small class="date">11.07.2020 15:01:26</small></span>
+
+                <div>
+                    <button type="button" data-action="done-task" class="btn btn-light align-self-end">Готово</button>
+                    <button type="button" data-action="delete-task" class="btn btn-light align-self-end">Удалить</button>
+                </div>
+            </li> -->
+
+        </ul>
+    </div>
+    <!-- //List of tasks -->
+
+
+
+    <!-- Form add new task -->
+    <div class="card bg-light">
+        <div class="card-header">Добавить новую задачу</div>
+        <div class="card-body">
+            <form id="form">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="addNewTask" placeholder="Текст задачи" required>
+                    <small id="emailHelp" class="form-text text-muted">Что делаем, сколько времени тратим, какой результат получаем.</small>
+                </div>
+
+                <button type="submit" id="btn-submit" class="btn btn-primary btn-lg mr-2">Добавить</button>
+                <button type="button" id="btn-clear" class="btn btn-outline-warning btn-lg" disabled>Очистить список</button>
+            </form>
+        </div>
+    </div>
+    <!-- //Form add new task -->
+
+</div>
+@@include('parts/footer-app.html')
